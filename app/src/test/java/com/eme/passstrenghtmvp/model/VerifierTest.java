@@ -1,5 +1,6 @@
 package com.eme.passstrenghtmvp.model;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +20,27 @@ public class VerifierTest {
 
     @Test
     public void evaluateLenght() {
+        // Given
+    String password = "password";
+
+        // When
+    boolean result = verifier.evaluateLenght(password);
+
+        // Then
+        assertThat(result).isTrue();
     }
+    @Test
+    public void evaluateLength_fail() {
+        // Given
+        String password = "pass";
+
+        // When
+        boolean result = verifier.evaluateLenght(password);
+
+        // Then
+        assertThat(result).isFalse();
+    }
+
 
     @Test
     public void evaluateUpper() {
@@ -33,8 +54,13 @@ public class VerifierTest {
     }
     @Test
     public void evaluateHasNumber_has0() {
+        // Given
         String password = "pass0";
+
+        // When
         boolean result = verifier.evaluateHasNumber(password);
+
+        // Then
         assertThat(result).isTrue();
     }
     @Test
@@ -91,4 +117,6 @@ public class VerifierTest {
         boolean result = verifier.evaluateHasNumber(password);
         assertThat(result).isTrue();
     }
+
+
 }

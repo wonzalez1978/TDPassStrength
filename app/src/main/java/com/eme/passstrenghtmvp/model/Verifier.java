@@ -15,7 +15,6 @@ public class Verifier implements IVerifier {
     @Override
     public boolean evaluateUpper(String password) {
         return password.toLowerCase().equals(password);
-
     }
 
     @Override
