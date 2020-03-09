@@ -3,7 +3,7 @@ package com.eme.passstrenghtmvp.model;
 public class Verifier implements IVerifier {
 
     public int verificar(String password) {
-        boolean largo = evaluateLenght(password);
+        boolean largo = evaluateLength(password);
         boolean mayus = evaluateUpper(password);
         boolean numero = evaluateHasNumber(password);
 
@@ -22,7 +22,7 @@ public class Verifier implements IVerifier {
 
 
     @Override
-    public boolean evaluateLenght(String password) {
+    public boolean evaluateLength(String password) {
         return password.length() >= 5;
     }
 
