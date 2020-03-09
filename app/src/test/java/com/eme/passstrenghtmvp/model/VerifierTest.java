@@ -82,7 +82,7 @@ public class VerifierTest {
         String password = "password";
 
         // When
-        boolean result = verifier.evaluateLenght(password);
+        boolean result = verifier.evaluateLength(password);
 
         // Then
         assertThat(result).isTrue();
@@ -94,7 +94,7 @@ public class VerifierTest {
         String password = "pass";
 
         // When
-        boolean result = verifier.evaluateLenght(password);
+        boolean result = verifier.evaluateLength(password);
 
         // Then
         assertThat(result).isFalse();
