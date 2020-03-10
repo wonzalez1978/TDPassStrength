@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PassStrenghtMVP</string>
+    <string name="nivel_de_seguridad">Nivel de seguridad</string>
+    <string name="weak">weak</string>
+    <string name="medium">medium</string>
+    <string name="strong">strong</string>
+    <string name="very_strong">Very Strong (:</string>
 </resources>
